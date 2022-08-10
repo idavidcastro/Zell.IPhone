@@ -29,8 +29,8 @@ namespace Esteban
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbColor = new System.Windows.Forms.ComboBox();
@@ -61,6 +61,7 @@ namespace Esteban
             this.label12 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscarEnRegistro = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataConsultaEnRegistro)).BeginInit();
@@ -72,7 +73,7 @@ namespace Esteban
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(162)))), ((int)(((byte)(62)))));
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(1326, 235);
+            this.btnGuardar.Location = new System.Drawing.Point(1326, 199);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(230, 61);
             this.btnGuardar.TabIndex = 4;
@@ -160,6 +161,7 @@ namespace Esteban
             this.txtSalida.Name = "txtSalida";
             this.txtSalida.Size = new System.Drawing.Size(212, 30);
             this.txtSalida.TabIndex = 18;
+            this.txtSalida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalida_KeyPress);
             // 
             // txtEntrada
             // 
@@ -170,6 +172,7 @@ namespace Esteban
             this.txtEntrada.Name = "txtEntrada";
             this.txtEntrada.Size = new System.Drawing.Size(212, 30);
             this.txtEntrada.TabIndex = 17;
+            this.txtEntrada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntrada_KeyPress);
             // 
             // txtIMEI2
             // 
@@ -180,6 +183,7 @@ namespace Esteban
             this.txtIMEI2.Name = "txtIMEI2";
             this.txtIMEI2.Size = new System.Drawing.Size(212, 30);
             this.txtIMEI2.TabIndex = 16;
+            this.txtIMEI2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMEI2_KeyPress);
             // 
             // txtIMEI1
             // 
@@ -190,6 +194,8 @@ namespace Esteban
             this.txtIMEI1.Name = "txtIMEI1";
             this.txtIMEI1.Size = new System.Drawing.Size(212, 30);
             this.txtIMEI1.TabIndex = 15;
+            this.txtIMEI1.TextChanged += new System.EventHandler(this.txtIMEI1_TextChanged);
+            this.txtIMEI1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMEI1_KeyPress);
             // 
             // cmbGB
             // 
@@ -216,11 +222,26 @@ namespace Esteban
             this.cmbTelefono.IntegralHeight = false;
             this.cmbTelefono.Items.AddRange(new object[] {
             "IPhone 6",
-            "Iphone 7",
-            "Iphone 8",
-            "Iphone X",
-            "Iphone XR",
-            "Iphone XS"});
+            "IPhone 6s",
+            "IPhone 6s Plus",
+            "IPhone 7",
+            "IPhone 7 Plus",
+            "IPhone 8",
+            "IPhone 8 Plus",
+            "IPhone X",
+            "IPhone XS",
+            "IPhone XS Max",
+            "IPhone XR",
+            "IPhone 11",
+            "IPhone 11 Pro",
+            "IPhone 11 Pro Max",
+            "IPhone 12",
+            "IPhone 12 Pro",
+            "IPhone 12 Pro Max",
+            "IPhone 13",
+            "IPhone 13 Pro",
+            "IPhone 13 Pro Max",
+            "IPhone SE 2020"});
             this.cmbTelefono.Location = new System.Drawing.Point(259, 107);
             this.cmbTelefono.Name = "cmbTelefono";
             this.cmbTelefono.Size = new System.Drawing.Size(212, 28);
@@ -235,6 +256,7 @@ namespace Esteban
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(212, 30);
             this.txtNombreCliente.TabIndex = 10;
+            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
             // dateTimePicker1
             // 
@@ -351,12 +373,13 @@ namespace Esteban
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(170)))));
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(1326, 736);
+            this.btnActualizar.Location = new System.Drawing.Point(1326, 304);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(230, 61);
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // cmbTelefonoConsulta
             // 
@@ -398,32 +421,37 @@ namespace Esteban
             // 
             // dataConsultaEnRegistro
             // 
-            this.dataConsultaEnRegistro.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
+            this.dataConsultaEnRegistro.BackgroundColor = System.Drawing.Color.White;
             this.dataConsultaEnRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataConsultaEnRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataConsultaEnRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataConsultaEnRegistro.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataConsultaEnRegistro.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataConsultaEnRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataConsultaEnRegistro.ColumnHeadersHeight = 30;
+            this.dataConsultaEnRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataConsultaEnRegistro.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataConsultaEnRegistro.EnableHeadersVisualStyles = false;
             this.dataConsultaEnRegistro.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
             this.dataConsultaEnRegistro.Location = new System.Drawing.Point(51, 21);
             this.dataConsultaEnRegistro.Name = "dataConsultaEnRegistro";
+            this.dataConsultaEnRegistro.RowHeadersVisible = false;
             this.dataConsultaEnRegistro.RowHeadersWidth = 51;
             this.dataConsultaEnRegistro.RowTemplate.Height = 24;
             this.dataConsultaEnRegistro.Size = new System.Drawing.Size(1040, 254);
             this.dataConsultaEnRegistro.TabIndex = 0;
+            this.dataConsultaEnRegistro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataConsultaEnRegistro_CellClick);
             // 
             // label12
             // 
@@ -442,22 +470,37 @@ namespace Esteban
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(1326, 821);
+            this.btnEliminar.Location = new System.Drawing.Point(1326, 799);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(230, 61);
             this.btnEliminar.TabIndex = 26;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBuscarEnRegistro
             // 
+            this.btnBuscarEnRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
             this.btnBuscarEnRegistro.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEnRegistro.ForeColor = System.Drawing.Color.White;
             this.btnBuscarEnRegistro.Location = new System.Drawing.Point(1481, 621);
             this.btnBuscarEnRegistro.Name = "btnBuscarEnRegistro";
             this.btnBuscarEnRegistro.Size = new System.Drawing.Size(75, 31);
             this.btnBuscarEnRegistro.TabIndex = 27;
             this.btnBuscarEnRegistro.Text = "Buscar";
-            this.btnBuscarEnRegistro.UseVisualStyleBackColor = true;
+            this.btnBuscarEnRegistro.UseVisualStyleBackColor = false;
+            this.btnBuscarEnRegistro.Click += new System.EventHandler(this.btnBuscarEnRegistro_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1326, 667);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 31);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Refrescar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmRegistro
             // 
@@ -465,6 +508,7 @@ namespace Esteban
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1599, 953);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBuscarEnRegistro);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label12);
@@ -517,5 +561,6 @@ namespace Esteban
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dataConsultaEnRegistro;
         private System.Windows.Forms.Button btnBuscarEnRegistro;
+        private System.Windows.Forms.Button button1;
     }
 }

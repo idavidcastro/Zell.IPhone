@@ -45,5 +45,31 @@ namespace Esteban
             MostrarFormulario(frmConsulta);
 
         }
+
+        private void btnCerrarPrincipal_Click(object sender, EventArgs e)
+        {
+            DialogResult resul = MessageBox.Show("¿Seguro que quiere salir de la aplicación?", "Salir", MessageBoxButtons.YesNo);
+            if (resul == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmHoraPrincipal frmHoraPrincipal = new FrmHoraPrincipal();
+            MostrarFormulario(frmHoraPrincipal);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            hora.Text = DateTime.Now.ToString("hh:mm:ss");
+            fecha.Text = DateTime.Now.ToLongDateString();
+        }
     }
 }
