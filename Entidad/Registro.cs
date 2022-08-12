@@ -8,7 +8,7 @@ namespace Entidad
 {
     public class Registro
     {
-        public string FechaIngreso { get; set; }
+        public DateTime FechaIngreso { get; set; }
         public string NombreCliente { get; set; }
         public string Iphone { get; set; }
         public string AppleWatch { get; set; }

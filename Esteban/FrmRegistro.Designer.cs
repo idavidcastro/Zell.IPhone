@@ -29,10 +29,14 @@ namespace Esteban
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSamsung = new System.Windows.Forms.TextBox();
+            this.Samsung = new System.Windows.Forms.Label();
+            this.cmbAppleWatch = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.cmbColor = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtObservacion = new System.Windows.Forms.TextBox();
@@ -40,6 +44,7 @@ namespace Esteban
             this.txtEntrada = new System.Windows.Forms.TextBox();
             this.txtIMEI2 = new System.Windows.Forms.TextBox();
             this.txtIMEI1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.cmbGB = new System.Windows.Forms.ComboBox();
             this.cmbIphone = new System.Windows.Forms.ComboBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -47,25 +52,21 @@ namespace Esteban
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.cmbTelefonoConsulta = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataConsultaEnRegistro = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnBuscarEnRegistro = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmbAppleWatch = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtSamsung = new System.Windows.Forms.TextBox();
-            this.Samsung = new System.Windows.Forms.Label();
+            this.cmbBlanco = new System.Windows.Forms.ComboBox();
+            this.txtBlanco = new System.Windows.Forms.TextBox();
+            this.cmbOpcionesdeConsulta = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataConsultaEnRegistro)).BeginInit();
@@ -122,6 +123,59 @@ namespace Esteban
             this.panel1.Size = new System.Drawing.Size(1143, 492);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtSamsung
+            // 
+            this.txtSamsung.BackColor = System.Drawing.Color.White;
+            this.txtSamsung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSamsung.Location = new System.Drawing.Point(259, 169);
+            this.txtSamsung.Multiline = true;
+            this.txtSamsung.Name = "txtSamsung";
+            this.txtSamsung.Size = new System.Drawing.Size(212, 30);
+            this.txtSamsung.TabIndex = 25;
+            this.txtSamsung.TextChanged += new System.EventHandler(this.txtSamsung_TextChanged);
+            // 
+            // Samsung
+            // 
+            this.Samsung.AutoSize = true;
+            this.Samsung.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Samsung.ForeColor = System.Drawing.Color.White;
+            this.Samsung.Location = new System.Drawing.Point(126, 171);
+            this.Samsung.Name = "Samsung";
+            this.Samsung.Size = new System.Drawing.Size(98, 22);
+            this.Samsung.TabIndex = 24;
+            this.Samsung.Text = "Samsung:";
+            // 
+            // cmbAppleWatch
+            // 
+            this.cmbAppleWatch.BackColor = System.Drawing.Color.White;
+            this.cmbAppleWatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAppleWatch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAppleWatch.FormattingEnabled = true;
+            this.cmbAppleWatch.Items.AddRange(new object[] {
+            "Serie 1",
+            "Serie 2",
+            "Serie 3",
+            "Serie 4",
+            "Serie 5",
+            "Serie 6",
+            "Serie 7"});
+            this.cmbAppleWatch.Location = new System.Drawing.Point(807, 107);
+            this.cmbAppleWatch.Name = "cmbAppleWatch";
+            this.cmbAppleWatch.Size = new System.Drawing.Size(212, 28);
+            this.cmbAppleWatch.TabIndex = 23;
+            this.cmbAppleWatch.SelectedIndexChanged += new System.EventHandler(this.cmbAppleWatch_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(635, 110);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 22);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Apple Watch:";
             // 
             // cmbColor
             // 
@@ -215,6 +269,17 @@ namespace Esteban
             this.txtIMEI1.TextChanged += new System.EventHandler(this.txtIMEI1_TextChanged);
             this.txtIMEI1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMEI1_KeyPress);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(156, 234);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 22);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "IMEI 1:";
+            // 
             // cmbGB
             // 
             this.cmbGB.BackColor = System.Drawing.Color.White;
@@ -288,7 +353,7 @@ namespace Esteban
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(212, 26);
             this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 8, 9, 13, 54, 55, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2022, 8, 12, 14, 45, 4, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label9
@@ -323,17 +388,6 @@ namespace Esteban
             this.label7.Size = new System.Drawing.Size(119, 22);
             this.label7.TabIndex = 6;
             this.label7.Text = "Entrada ($):";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(156, 234);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 22);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "IMEI 1:";
             // 
             // label5
             // 
@@ -404,34 +458,16 @@ namespace Esteban
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // cmbTelefonoConsulta
-            // 
-            this.cmbTelefonoConsulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTelefonoConsulta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTelefonoConsulta.FormattingEnabled = true;
-            this.cmbTelefonoConsulta.IntegralHeight = false;
-            this.cmbTelefonoConsulta.Items.AddRange(new object[] {
-            "IPhone 6",
-            "Iphone 7",
-            "Iphone 8",
-            "Iphone X",
-            "Iphone XR",
-            "Iphone XS"});
-            this.cmbTelefonoConsulta.Location = new System.Drawing.Point(1326, 622);
-            this.cmbTelefonoConsulta.Name = "cmbTelefonoConsulta";
-            this.cmbTelefonoConsulta.Size = new System.Drawing.Size(149, 28);
-            this.cmbTelefonoConsulta.TabIndex = 23;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(1329, 585);
+            this.label11.Location = new System.Drawing.Point(1322, 585);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 22);
+            this.label11.Size = new System.Drawing.Size(138, 22);
             this.label11.TabIndex = 22;
-            this.label11.Text = "Teléfono:";
+            this.label11.Text = "Consultar por:";
             // 
             // panel2
             // 
@@ -451,24 +487,24 @@ namespace Esteban
             this.dataConsultaEnRegistro.BackgroundColor = System.Drawing.Color.White;
             this.dataConsultaEnRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataConsultaEnRegistro.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataConsultaEnRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataConsultaEnRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataConsultaEnRegistro.ColumnHeadersHeight = 30;
             this.dataConsultaEnRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataConsultaEnRegistro.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataConsultaEnRegistro.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataConsultaEnRegistro.EnableHeadersVisualStyles = false;
             this.dataConsultaEnRegistro.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
             this.dataConsultaEnRegistro.Location = new System.Drawing.Point(51, 21);
@@ -481,6 +517,7 @@ namespace Esteban
             this.dataConsultaEnRegistro.Size = new System.Drawing.Size(1040, 254);
             this.dataConsultaEnRegistro.TabIndex = 0;
             this.dataConsultaEnRegistro.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataConsultaEnRegistro_CellClick);
+            this.dataConsultaEnRegistro.SelectionChanged += new System.EventHandler(this.dataConsultaEnRegistro_SelectionChanged);
             // 
             // label12
             // 
@@ -507,82 +544,60 @@ namespace Esteban
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnBuscarEnRegistro
-            // 
-            this.btnBuscarEnRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            this.btnBuscarEnRegistro.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEnRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarEnRegistro.Location = new System.Drawing.Point(1481, 621);
-            this.btnBuscarEnRegistro.Name = "btnBuscarEnRegistro";
-            this.btnBuscarEnRegistro.Size = new System.Drawing.Size(75, 31);
-            this.btnBuscarEnRegistro.TabIndex = 27;
-            this.btnBuscarEnRegistro.Text = "Buscar";
-            this.btnBuscarEnRegistro.UseVisualStyleBackColor = false;
-            this.btnBuscarEnRegistro.Click += new System.EventHandler(this.btnBuscarEnRegistro_Click);
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1326, 667);
+            this.button1.Location = new System.Drawing.Point(1372, 723);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 31);
+            this.button1.Size = new System.Drawing.Size(134, 31);
             this.button1.TabIndex = 28;
             this.button1.Text = "Refrescar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cmbAppleWatch
+            // cmbBlanco
             // 
-            this.cmbAppleWatch.BackColor = System.Drawing.Color.White;
-            this.cmbAppleWatch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAppleWatch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAppleWatch.FormattingEnabled = true;
-            this.cmbAppleWatch.Items.AddRange(new object[] {
-            "Serie 1",
-            "Serie 2",
-            "Serie 3",
-            "Serie 4",
-            "Serie 5",
-            "Serie 6",
-            "Serie 7"});
-            this.cmbAppleWatch.Location = new System.Drawing.Point(807, 107);
-            this.cmbAppleWatch.Name = "cmbAppleWatch";
-            this.cmbAppleWatch.Size = new System.Drawing.Size(212, 28);
-            this.cmbAppleWatch.TabIndex = 23;
-            this.cmbAppleWatch.SelectedIndexChanged += new System.EventHandler(this.cmbAppleWatch_SelectedIndexChanged);
+            this.cmbBlanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBlanco.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBlanco.FormattingEnabled = true;
+            this.cmbBlanco.IntegralHeight = false;
+            this.cmbBlanco.Location = new System.Drawing.Point(1326, 668);
+            this.cmbBlanco.Name = "cmbBlanco";
+            this.cmbBlanco.Size = new System.Drawing.Size(230, 28);
+            this.cmbBlanco.TabIndex = 45;
+            this.cmbBlanco.SelectedIndexChanged += new System.EventHandler(this.cmbBlanco_SelectedIndexChanged);
             // 
-            // label13
+            // txtBlanco
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(635, 110);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 22);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Apple Watch:";
+            this.txtBlanco.BackColor = System.Drawing.Color.White;
+            this.txtBlanco.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBlanco.Location = new System.Drawing.Point(1326, 668);
+            this.txtBlanco.Multiline = true;
+            this.txtBlanco.Name = "txtBlanco";
+            this.txtBlanco.Size = new System.Drawing.Size(230, 30);
+            this.txtBlanco.TabIndex = 44;
+            this.txtBlanco.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBlanco_KeyUp);
             // 
-            // txtSamsung
+            // cmbOpcionesdeConsulta
             // 
-            this.txtSamsung.BackColor = System.Drawing.Color.White;
-            this.txtSamsung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSamsung.Location = new System.Drawing.Point(259, 169);
-            this.txtSamsung.Multiline = true;
-            this.txtSamsung.Name = "txtSamsung";
-            this.txtSamsung.Size = new System.Drawing.Size(212, 30);
-            this.txtSamsung.TabIndex = 25;
-            this.txtSamsung.TextChanged += new System.EventHandler(this.txtSamsung_TextChanged);
-            // 
-            // Samsung
-            // 
-            this.Samsung.AutoSize = true;
-            this.Samsung.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Samsung.ForeColor = System.Drawing.Color.White;
-            this.Samsung.Location = new System.Drawing.Point(126, 171);
-            this.Samsung.Name = "Samsung";
-            this.Samsung.Size = new System.Drawing.Size(98, 22);
-            this.Samsung.TabIndex = 24;
-            this.Samsung.Text = "Samsung:";
+            this.cmbOpcionesdeConsulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOpcionesdeConsulta.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOpcionesdeConsulta.FormattingEnabled = true;
+            this.cmbOpcionesdeConsulta.IntegralHeight = false;
+            this.cmbOpcionesdeConsulta.Items.AddRange(new object[] {
+            "Iphone",
+            "Apple Watch",
+            "Samsung",
+            "Nombre",
+            "IMEI 1",
+            "IMEI 2",
+            "Color",
+            "GB"});
+            this.cmbOpcionesdeConsulta.Location = new System.Drawing.Point(1326, 621);
+            this.cmbOpcionesdeConsulta.Name = "cmbOpcionesdeConsulta";
+            this.cmbOpcionesdeConsulta.Size = new System.Drawing.Size(230, 28);
+            this.cmbOpcionesdeConsulta.TabIndex = 46;
+            this.cmbOpcionesdeConsulta.SelectedIndexChanged += new System.EventHandler(this.cmbOpcionesdeConsulta_SelectedIndexChanged);
             // 
             // FrmRegistro
             // 
@@ -590,12 +605,13 @@ namespace Esteban
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1599, 953);
+            this.Controls.Add(this.cmbOpcionesdeConsulta);
+            this.Controls.Add(this.cmbBlanco);
+            this.Controls.Add(this.txtBlanco);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnBuscarEnRegistro);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.cmbTelefonoConsulta);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
@@ -637,17 +653,18 @@ namespace Esteban
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.ComboBox cmbTelefonoConsulta;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dataConsultaEnRegistro;
-        private System.Windows.Forms.Button btnBuscarEnRegistro;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSamsung;
         private System.Windows.Forms.Label Samsung;
         private System.Windows.Forms.ComboBox cmbAppleWatch;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbBlanco;
+        private System.Windows.Forms.TextBox txtBlanco;
+        private System.Windows.Forms.ComboBox cmbOpcionesdeConsulta;
     }
 }

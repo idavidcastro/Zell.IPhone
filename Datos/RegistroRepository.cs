@@ -26,7 +26,7 @@ namespace Datos
                 command.CommandText = "insert Registro(FechaIngreso,Nombre,Iphone,AppleWatch,Samsung,GB,Color,IMEI1,IMEI2,Entrada,Salida,Observacion)" +
                               " values (@FechaIngreso, @Nombre, @Iphone,@AppleWatch,@Samsung, @GB,@Color, @IMEI1, @IMEI2, @Entrada,@Salida,@Observacion)";
 
-                command.Parameters.Add(new SqlParameter("@FechaIngreso", ValidarCamposVacios(registro.FechaIngreso)));
+                command.Parameters.Add(new SqlParameter("@FechaIngreso", registro.FechaIngreso.ToShortDateString()));
                 command.Parameters.Add(new SqlParameter("@Nombre", ValidarCamposVacios(registro.NombreCliente)));
                 command.Parameters.Add(new SqlParameter("@Iphone", ValidarCamposVacios(registro.Iphone)));
                 command.Parameters.Add(new SqlParameter("@AppleWatch", ValidarCamposVacios(registro.AppleWatch)));
@@ -69,7 +69,7 @@ namespace Datos
                     {
                         Registro registro = new Registro
                         {
-                            FechaIngreso = reader.GetString(0),
+                            FechaIngreso = reader.GetDateTime(0),
                             NombreCliente = reader.GetString(1),
                             Iphone = reader.GetString(2),
                             AppleWatch = reader.GetString(3),
@@ -80,7 +80,7 @@ namespace Datos
                             IMEI2 = reader.GetString(8),
                             Entrada = reader.GetString(9),
                             Salida = reader.GetString(10),
-                            Observacion = reader.GetString(10)                         
+                            Observacion = reader.GetString(11)                         
                         };
 
                         return registro;
@@ -110,7 +110,7 @@ namespace Datos
                     "GB=@GB, Color=@Color,IMEI1=@IMEI1,IMEI2=@IMEI2,Entrada=@Entrada,Salida=@Salida,Observacion=@Observacion" +
                     " where IMEI1=@IMEI1";
                 command.Parameters.Add(new SqlParameter("@IMEI1", IMEI1));
-                command.Parameters.Add(new SqlParameter("@FechaIngreso", registroNuevo.FechaIngreso));
+                command.Parameters.Add(new SqlParameter("@FechaIngreso", registroNuevo.FechaIngreso.ToShortDateString()));
                 command.Parameters.Add(new SqlParameter("@Nombre", registroNuevo.NombreCliente));
                 command.Parameters.Add(new SqlParameter("@Iphone", registroNuevo.Iphone));
                 command.Parameters.Add(new SqlParameter("@AppleWatch", registroNuevo.AppleWatch));
@@ -138,7 +138,7 @@ namespace Datos
                 {
                     Registro registro = new Registro
                     {
-                        FechaIngreso = reader.GetString(0),
+                        FechaIngreso = reader.GetDateTime(0),
                         NombreCliente = reader.GetString(1),
                         Iphone = reader.GetString(2),
                         AppleWatch = reader.GetString(3),
@@ -149,7 +149,7 @@ namespace Datos
                         IMEI2 = reader.GetString(8),
                         Entrada = reader.GetString(9),
                         Salida = reader.GetString(10),
-                        Observacion = reader.GetString(10)
+                        Observacion = reader.GetString(11)
                     };
                     registros.Add(registro);
                 }
@@ -170,7 +170,7 @@ namespace Datos
                 {
                     Registro registro = new Registro
                     {
-                        FechaIngreso = reader.GetString(0),
+                        FechaIngreso = reader.GetDateTime(0),
                         NombreCliente = reader.GetString(1),
                         Iphone = reader.GetString(2),
                         AppleWatch = reader.GetString(3),
@@ -181,7 +181,7 @@ namespace Datos
                         IMEI2 = reader.GetString(8),
                         Entrada = reader.GetString(9),
                         Salida = reader.GetString(10),
-                        Observacion = reader.GetString(10)
+                        Observacion = reader.GetString(11)
                     };
                     registros.Add(registro);
                 }
@@ -202,7 +202,7 @@ namespace Datos
                 {
                     Registro registro = new Registro
                     {
-                        FechaIngreso = reader.GetString(0),
+                        FechaIngreso = reader.GetDateTime(0),
                         NombreCliente = reader.GetString(1),
                         Iphone = reader.GetString(2),
                         AppleWatch = reader.GetString(3),
@@ -213,7 +213,7 @@ namespace Datos
                         IMEI2 = reader.GetString(8),
                         Entrada = reader.GetString(9),
                         Salida = reader.GetString(10),
-                        Observacion = reader.GetString(10)
+                        Observacion = reader.GetString(11)
                     };
                     registros.Add(registro);
                 }
@@ -234,7 +234,7 @@ namespace Datos
                 {
                     Registro registro = new Registro
                     {
-                        FechaIngreso = reader.GetString(0),
+                        FechaIngreso = reader.GetDateTime(0),
                         NombreCliente = reader.GetString(1),
                         Iphone = reader.GetString(2),
                         AppleWatch = reader.GetString(3),
@@ -245,7 +245,7 @@ namespace Datos
                         IMEI2 = reader.GetString(8),
                         Entrada = reader.GetString(9),
                         Salida = reader.GetString(10),
-                        Observacion = reader.GetString(10)
+                        Observacion = reader.GetString(11)
                     };
                     registros.Add(registro);
                 }
@@ -266,7 +266,7 @@ namespace Datos
                 {
                     Registro registro = new Registro
                     {
-                        FechaIngreso = reader.GetString(0),
+                        FechaIngreso = reader.GetDateTime(0),
                         NombreCliente = reader.GetString(1),
                         Iphone = reader.GetString(2),
                         AppleWatch = reader.GetString(3),
@@ -277,7 +277,7 @@ namespace Datos
                         IMEI2 = reader.GetString(8),
                         Entrada = reader.GetString(9),
                         Salida = reader.GetString(10),
-                        Observacion = reader.GetString(10)
+                        Observacion = reader.GetString(11)
                     };
                     registros.Add(registro);
                 }
@@ -298,7 +298,7 @@ namespace Datos
                 {
                     Registro registro = new Registro
                     {
-                        FechaIngreso = reader.GetString(0),
+                        FechaIngreso = reader.GetDateTime(0),
                         NombreCliente = reader.GetString(1),
                         Iphone = reader.GetString(2),
                         AppleWatch = reader.GetString(3),
@@ -309,7 +309,7 @@ namespace Datos
                         IMEI2 = reader.GetString(8),
                         Entrada = reader.GetString(9),
                         Salida = reader.GetString(10),
-                        Observacion = reader.GetString(10)
+                        Observacion = reader.GetString(11)
                     };
                     registros.Add(registro);
                 }
@@ -324,7 +324,7 @@ namespace Datos
             List<Registro> registros = new List<Registro>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "Select * from Registro";
+                command.CommandText = "Select * from Registro order by FechaIngreso asc";
                 var reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -332,7 +332,7 @@ namespace Datos
                     {
                         Registro registro = new Registro
                         {
-                            FechaIngreso = reader.GetString(0),
+                            FechaIngreso = reader.GetDateTime(0),
                             NombreCliente = reader.GetString(1),
                             Iphone = reader.GetString(2),
                             AppleWatch = reader.GetString(3),
@@ -343,7 +343,7 @@ namespace Datos
                             IMEI2 = reader.GetString(8),
                             Entrada = reader.GetString(9),
                             Salida = reader.GetString(10),
-                            Observacion = reader.GetString(10)
+                            Observacion = reader.GetString(11)
                         };
 
                         registros.Add(registro);

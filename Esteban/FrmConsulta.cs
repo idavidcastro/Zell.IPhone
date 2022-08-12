@@ -1,5 +1,7 @@
-﻿using Lógica;
+﻿using Entidad;
+using Lógica;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -9,11 +11,21 @@ namespace Esteban
     public partial class FrmConsulta : Form
     {
         RegistroService registroService;
+        List<Registro> registros;
         public FrmConsulta()
         {
             InitializeComponent();
+            registroService = new RegistroService(ConfigConnectionString.Cadena);
+            CargarListado();
         }
+        public void CargarListado()
+        {
+            registros = new List<Registro>();
+            registros = registroService.ConsultarListRegistros();
 
+            dataConsultaEnConsulta.DataSource = registros;
+            
+        }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbOpcionesdeConsulta.Text.Equals("Iphone"))
@@ -44,7 +56,7 @@ namespace Esteban
                 cmbBlanco.Items.Add("IPhone 13 Pro Max");
                 cmbBlanco.Items.Add("IPhone SE 2020");
 
-                BusquedaReponseRegistro respuesta;
+                
             }
             else if (cmbOpcionesdeConsulta.Text.Equals("Apple Watch"))
             {
@@ -75,12 +87,12 @@ namespace Esteban
 
 
             }
-            else if (cmbOpcionesdeConsulta.Text.Equals("IMEI"))
+            else if (cmbOpcionesdeConsulta.Text.Equals("IMEI 1"))
             {
                 txtBlanco.Visible = true;
                 cmbBlanco.Visible = false;
             }
-            else if (cmbOpcionesdeConsulta.Text.Equals("IMEI"))
+            else if (cmbOpcionesdeConsulta.Text.Equals("IMEI 2"))
             {
                 txtBlanco.Visible = true;
                 cmbBlanco.Visible = false;
@@ -152,38 +164,38 @@ namespace Esteban
                 da.Fill(dt);
                 dataConsultaEnConsulta.DataSource = dt;
             }
+            else if (cmbOpcionesdeConsulta.Text.Equals("IMEI 1"))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select *from Registro where IMEI1 like ('" + txtBlanco.Text + "%')";
+                cmd.ExecuteNonQuery();
+
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+                dataConsultaEnConsulta.DataSource = dt;
+            }
+            else if (cmbOpcionesdeConsulta.Text.Equals("IMEI 2"))
+            {
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select *from Registro where IMEI2 like ('" + txtBlanco.Text + "%')";
+                cmd.ExecuteNonQuery();
+
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+                dataConsultaEnConsulta.DataSource = dt;
+            }
             cn.Close();
         }
 
         private void cmbBlanco_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void txtBlanco_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            BusquedaReponseRegistro respuesta;
-            
-
-            /*
-            ConsultaReponseRegistro respuesta;
-
-            respuesta = registroService.ConsultarRegistrosIMEI1(cmbBlanco.Text);
-
-            if (respuesta.Error)
-            {
-                MessageBox.Show(respuesta.Mensaje);
-            }
-            else
-            {
-                dataConsultaEnConsulta.DataSource = respuesta.Registros;
-            }
-            
             if (cmbOpcionesdeConsulta.Text.Equals("Iphone"))
             {
                 ConsultaReponseRegistro respuesta;
@@ -274,7 +286,26 @@ namespace Esteban
                     dataConsultaEnConsulta.DataSource = respuesta.Registros;
                 }
             }
-            */
+        }
+
+        private void txtBlanco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CargarListado();
+
+            cmbOpcionesdeConsulta.Text = " ";
+            cmbBlanco.Text = " ";
+            txtBlanco.Text = " ";
         }
     }
 }

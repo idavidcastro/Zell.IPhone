@@ -6,3 +6,10 @@ create table Registro(FechaIngreso nvarchar(60), Nombre nvarchar(60), Iphone nva
 
 DROP TABLE Registro
 
+select *from Registro
+
+select *from Registro order by convert(FechaIngreso) desc;
+
+select *from Registro order by (convert(varchar(30), getdate(),103)) AS FechaIngreso;
+
+//arreglar
