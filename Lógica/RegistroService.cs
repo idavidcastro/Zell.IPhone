@@ -112,13 +112,99 @@ namespace Lógica
             }
             return registros;
         }
-        public ConsultaReponseRegistro ConsultarRegistros(string IMEI1)
+        public ConsultaReponseRegistro ConsultarRegistrosIMEI1(string IMEI1)
         {
             try
             {
                 connectionManager.Open();
 
-                return new ConsultaReponseRegistro(registroRepository.ConsultarRegistros(IMEI1));
+                return new ConsultaReponseRegistro(registroRepository.ConsultarRegistrosIMEI1(IMEI1));
+            }
+            catch (Exception exception)
+            {
+                return new ConsultaReponseRegistro("Se presentó el siguiente error: " + exception.Message);
+            }
+            finally
+            {
+                connectionManager.Close();
+            }
+        }
+        public ConsultaReponseRegistro ConsultarRegistrosIMEI2(string IMEI2)
+        {
+            try
+            {
+                connectionManager.Open();
+
+                return new ConsultaReponseRegistro(registroRepository.ConsultarRegistrosIMEI2(IMEI2));
+            }
+            catch (Exception exception)
+            {
+                return new ConsultaReponseRegistro("Se presentó el siguiente error: " + exception.Message);
+            }
+            finally
+            {
+                connectionManager.Close();
+            }
+        }
+        public ConsultaReponseRegistro ConsultarRegistrosIphone(string Iphone)
+        {
+            try
+            {
+                connectionManager.Open();
+
+                return new ConsultaReponseRegistro(registroRepository.ConsultarRegistrosIphone(Iphone));
+            }
+            catch (Exception exception)
+            {
+                return new ConsultaReponseRegistro("Se presentó el siguiente error: " + exception.Message);
+            }
+            finally
+            {
+                connectionManager.Close();
+            }
+        }
+        public ConsultaReponseRegistro ConsultarRegistrosAppleWatch(string AppleWatch)
+        {
+            try
+            {
+                connectionManager.Open();
+
+                return new ConsultaReponseRegistro(registroRepository.ConsultarRegistrosAppleWatch(AppleWatch));
+            }
+            catch (Exception exception)
+            {
+                return new ConsultaReponseRegistro("Se presentó el siguiente error: " + exception.Message);
+            }
+            finally
+            {
+                connectionManager.Close();
+            }
+        }
+        
+        public ConsultaReponseRegistro ConsultarRegistrosColor(string Color)
+        {
+            try
+            {
+                connectionManager.Open();
+
+                return new ConsultaReponseRegistro(registroRepository.ConsultarRegistrosColor(Color));
+            }
+            catch (Exception exception)
+            {
+                return new ConsultaReponseRegistro("Se presentó el siguiente error: " + exception.Message);
+            }
+            finally
+            {
+                connectionManager.Close();
+            }
+        }
+        public ConsultaReponseRegistro ConsultarRegistrosGB(string GB)
+        {
+            try
+            {
+                connectionManager.Open();
+
+                return new ConsultaReponseRegistro(registroRepository.ConsultarRegistrosGB(GB));
             }
             catch (Exception exception)
             {

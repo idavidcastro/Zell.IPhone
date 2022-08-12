@@ -34,7 +34,9 @@ namespace Esteban
         public void LimpiarCampos()
         {
             txtNombreCliente.Text = " ";
-            cmbTelefono.Text = " ";
+            cmbIphone.Text = " ";
+            cmbAppleWatch.Text = " ";
+            txtSamsung.Text = " ";
             cmbGB.Text = " ";
             cmbColor.Text = " ";
             txtIMEI1.Text = " ";
@@ -53,15 +55,16 @@ namespace Esteban
         {
             
         }
-
+        
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             registro = new Registro()
-            {
-                 
-                FechaIngreso = dateTimePicker1.Text,
+            {                
+                FechaIngreso = dateTimePicker1.Text,               
                 NombreCliente = txtNombreCliente.Text,
-                Telefono= cmbTelefono.Text,
+                Iphone= cmbIphone.Text,
+                AppleWatch= cmbAppleWatch.Text,
+                Samsung= txtSamsung.Text,
                 GB= cmbGB.Text,
                 Color= cmbColor.Text,
                 IMEI1= txtIMEI1.Text,
@@ -70,6 +73,7 @@ namespace Esteban
                 Salida = txtSalida.Text,
                 Observacion= txtObservacion.Text
             };
+            
 
             string mensaje = registroService.GuardarRegistro(registro);
             MessageBox.Show(mensaje, "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -89,7 +93,7 @@ namespace Esteban
 
         private void txtIMEI1_TextChanged(object sender, EventArgs e)
         {
-
+            Validar();
         }
 
         private void txtIMEI1_KeyPress(object sender, KeyPressEventArgs e)
@@ -136,23 +140,27 @@ namespace Esteban
         {
             dateTimePicker1.Text= dataConsultaEnRegistro.CurrentRow.Cells[0].Value.ToString();
             txtNombreCliente.Text = dataConsultaEnRegistro.CurrentRow.Cells[1].Value.ToString();
-            cmbTelefono.Text = dataConsultaEnRegistro.CurrentRow.Cells[2].Value.ToString();
-            cmbGB.Text = dataConsultaEnRegistro.CurrentRow.Cells[3].Value.ToString();
-            cmbColor.Text = dataConsultaEnRegistro.CurrentRow.Cells[4].Value.ToString();
-            txtIMEI1.Text = dataConsultaEnRegistro.CurrentRow.Cells[5].Value.ToString();
-            txtIMEI2.Text = dataConsultaEnRegistro.CurrentRow.Cells[6].Value.ToString();
-            txtEntrada.Text = dataConsultaEnRegistro.CurrentRow.Cells[7].Value.ToString();
-            txtSalida.Text = dataConsultaEnRegistro.CurrentRow.Cells[8].Value.ToString();
-            txtObservacion.Text = dataConsultaEnRegistro.CurrentRow.Cells[9].Value.ToString();
+            cmbIphone.Text = dataConsultaEnRegistro.CurrentRow.Cells[2].Value.ToString();
+            cmbAppleWatch.Text= dataConsultaEnRegistro.CurrentRow.Cells[3].Value.ToString();
+            Samsung.Text = dataConsultaEnRegistro.CurrentRow.Cells[4].Value.ToString();
+            cmbGB.Text = dataConsultaEnRegistro.CurrentRow.Cells[5].Value.ToString();
+            cmbColor.Text = dataConsultaEnRegistro.CurrentRow.Cells[6].Value.ToString();
+            txtIMEI1.Text = dataConsultaEnRegistro.CurrentRow.Cells[7].Value.ToString();
+            txtIMEI2.Text = dataConsultaEnRegistro.CurrentRow.Cells[8].Value.ToString();
+            txtEntrada.Text = dataConsultaEnRegistro.CurrentRow.Cells[9].Value.ToString();
+            txtSalida.Text = dataConsultaEnRegistro.CurrentRow.Cells[10].Value.ToString();
+            txtObservacion.Text = dataConsultaEnRegistro.CurrentRow.Cells[11].Value.ToString();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             registro = new Registro()
             {
-                FechaIngreso = dateTimePicker1.Text,
+                FechaIngreso = dateTimePicker1.Value.ToString("dd/MM/yyyy"),
                 NombreCliente = txtNombreCliente.Text,
-                Telefono = cmbTelefono.Text,
+                Iphone = cmbIphone.Text,
+                AppleWatch = cmbAppleWatch.Text,
+                Samsung = txtSamsung.Text,
                 GB = cmbGB.Text,
                 Color = cmbColor.Text,
                 IMEI1 = txtIMEI1.Text,
@@ -174,7 +182,7 @@ namespace Esteban
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string IMEI1 = Convert.ToString(dataConsultaEnRegistro.CurrentRow.Cells[5].Value);
+            string IMEI1 = Convert.ToString(dataConsultaEnRegistro.CurrentRow.Cells[7].Value);
 
             DialogResult resul = MessageBox.Show("¿Seguro que quiere eliminar este registro?", "Eliminiar", MessageBoxButtons.YesNo);
             if (resul == DialogResult.Yes)
@@ -194,9 +202,10 @@ namespace Esteban
 
         private void btnBuscarEnRegistro_Click(object sender, EventArgs e)
         {
+            
             ConsultaReponseRegistro respuesta;
 
-            respuesta = registroService.ConsultarRegistros(cmbTelefonoConsulta.Text);
+            respuesta = registroService.ConsultarRegistrosIMEI1(cmbTelefonoConsulta.Text);
 
             if (respuesta.Error)
             {
@@ -206,6 +215,84 @@ namespace Esteban
             {
                 dataConsultaEnRegistro.DataSource = respuesta.Registros;
             }
+            
+        }
+
+        private void FrmRegistro_Load(object sender, EventArgs e)
+        {
+            
+            btnGuardar.Enabled = false;          
+            btnEliminar.Enabled = false;
+            //btnBuscarEnRegistro.Enabled = false;
+            
+        }
+        public void Validar()
+        {
+            var vr = !string.IsNullOrEmpty(txtIMEI1.Text);
+
+            btnGuardar.Enabled = vr;
+
+        }
+        
+
+        private void txtNombreCliente_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbIphone_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbAppleWatch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtSamsung_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbGB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtEntrada_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtSalida_TextChanged(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtIMEI2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtObservacion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

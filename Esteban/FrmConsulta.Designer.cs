@@ -29,15 +29,16 @@ namespace Esteban
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbOpcionesdeConsulta = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.labelBlanco = new System.Windows.Forms.Label();
             this.dataConsultaEnConsulta = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
-            this.txtNombreClienteConsultar = new System.Windows.Forms.TextBox();
+            this.txtBlanco = new System.Windows.Forms.TextBox();
             this.cmbBlanco = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataConsultaEnConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +49,12 @@ namespace Esteban
             this.cmbOpcionesdeConsulta.FormattingEnabled = true;
             this.cmbOpcionesdeConsulta.IntegralHeight = false;
             this.cmbOpcionesdeConsulta.Items.AddRange(new object[] {
-            "Teléfono",
+            "Iphone",
+            "Apple Watch",
+            "Samsung",
             "Nombre",
-            "IMEI",
+            "IMEI 1",
+            "IMEI 2",
             "Color",
             "GB"});
             this.cmbOpcionesdeConsulta.Location = new System.Drawing.Point(577, 56);
@@ -75,34 +79,35 @@ namespace Esteban
             this.labelBlanco.AutoSize = true;
             this.labelBlanco.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBlanco.ForeColor = System.Drawing.Color.White;
-            this.labelBlanco.Location = new System.Drawing.Point(868, 58);
+            this.labelBlanco.Location = new System.Drawing.Point(825, 58);
             this.labelBlanco.Name = "labelBlanco";
-            this.labelBlanco.Size = new System.Drawing.Size(0, 22);
+            this.labelBlanco.Size = new System.Drawing.Size(29, 22);
             this.labelBlanco.TabIndex = 31;
+            this.labelBlanco.Text = "→";
             // 
             // dataConsultaEnConsulta
             // 
             this.dataConsultaEnConsulta.BackgroundColor = System.Drawing.Color.White;
             this.dataConsultaEnConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataConsultaEnConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataConsultaEnConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataConsultaEnConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataConsultaEnConsulta.ColumnHeadersHeight = 30;
             this.dataConsultaEnConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataConsultaEnConsulta.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataConsultaEnConsulta.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataConsultaEnConsulta.EnableHeadersVisualStyles = false;
             this.dataConsultaEnConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
             this.dataConsultaEnConsulta.Location = new System.Drawing.Point(143, 140);
@@ -123,16 +128,17 @@ namespace Esteban
             this.button5.Text = "Refrescar";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // txtNombreClienteConsultar
+            // txtBlanco
             // 
-            this.txtNombreClienteConsultar.BackColor = System.Drawing.Color.White;
-            this.txtNombreClienteConsultar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreClienteConsultar.Location = new System.Drawing.Point(978, 54);
-            this.txtNombreClienteConsultar.Multiline = true;
-            this.txtNombreClienteConsultar.Name = "txtNombreClienteConsultar";
-            this.txtNombreClienteConsultar.Size = new System.Drawing.Size(210, 30);
-            this.txtNombreClienteConsultar.TabIndex = 42;
-            this.txtNombreClienteConsultar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombreCliente_KeyUp);
+            this.txtBlanco.BackColor = System.Drawing.Color.White;
+            this.txtBlanco.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBlanco.Location = new System.Drawing.Point(910, 55);
+            this.txtBlanco.Multiline = true;
+            this.txtBlanco.Name = "txtBlanco";
+            this.txtBlanco.Size = new System.Drawing.Size(210, 30);
+            this.txtBlanco.TabIndex = 42;
+            this.txtBlanco.TextChanged += new System.EventHandler(this.txtBlanco_TextChanged);
+            this.txtBlanco.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombreCliente_KeyUp);
             // 
             // cmbBlanco
             // 
@@ -140,16 +146,21 @@ namespace Esteban
             this.cmbBlanco.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBlanco.FormattingEnabled = true;
             this.cmbBlanco.IntegralHeight = false;
-            this.cmbBlanco.Items.AddRange(new object[] {
-            "Teléfono",
-            "Nombre",
-            "IMEI",
-            "Color",
-            "GB"});
-            this.cmbBlanco.Location = new System.Drawing.Point(978, 56);
+            this.cmbBlanco.Location = new System.Drawing.Point(910, 91);
             this.cmbBlanco.Name = "cmbBlanco";
             this.cmbBlanco.Size = new System.Drawing.Size(210, 28);
             this.cmbBlanco.TabIndex = 43;
+            this.cmbBlanco.SelectedIndexChanged += new System.EventHandler(this.cmbBlanco_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1205, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmConsulta
             // 
@@ -157,8 +168,9 @@ namespace Esteban
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1599, 953);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbBlanco);
-            this.Controls.Add(this.txtNombreClienteConsultar);
+            this.Controls.Add(this.txtBlanco);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dataConsultaEnConsulta);
             this.Controls.Add(this.labelBlanco);
@@ -180,7 +192,8 @@ namespace Esteban
         private System.Windows.Forms.Label labelBlanco;
         private System.Windows.Forms.DataGridView dataConsultaEnConsulta;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox txtNombreClienteConsultar;
+        private System.Windows.Forms.TextBox txtBlanco;
         private System.Windows.Forms.ComboBox cmbBlanco;
+        private System.Windows.Forms.Button button1;
     }
 }

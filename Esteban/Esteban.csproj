@@ -55,12 +55,6 @@
     <Compile Include="FrmConsulta.Designer.cs">
       <DependentUpon>FrmConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmHoraPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmHoraPrincipal.Designer.cs">
-      <DependentUpon>FrmHoraPrincipal.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,9 +71,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmConsulta.resx">
       <DependentUpon>FrmConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmHoraPrincipal.resx">
-      <DependentUpon>FrmHoraPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

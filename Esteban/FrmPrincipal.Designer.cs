@@ -29,23 +29,18 @@ namespace Esteban
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panelOpcionesLateral = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelBlancoPrincipal = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCerrarPrincipal = new System.Windows.Forms.Button();
-            this.fecha = new System.Windows.Forms.Label();
-            this.hora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panelBlancoPrincipal = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelOpcionesLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelBlancoPrincipal.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +92,7 @@ namespace Esteban
             this.panelOpcionesLateral.Name = "panelOpcionesLateral";
             this.panelOpcionesLateral.Size = new System.Drawing.Size(325, 953);
             this.panelOpcionesLateral.TabIndex = 0;
+            this.panelOpcionesLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelOpcionesLateral_Paint);
             // 
             // pictureBox1
             // 
@@ -107,18 +103,7 @@ namespace Esteban
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panelBlancoPrincipal
-            // 
-            this.panelBlancoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            this.panelBlancoPrincipal.Controls.Add(this.fecha);
-            this.panelBlancoPrincipal.Controls.Add(this.hora);
-            this.panelBlancoPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBlancoPrincipal.Location = new System.Drawing.Point(325, 0);
-            this.panelBlancoPrincipal.Name = "panelBlancoPrincipal";
-            this.panelBlancoPrincipal.Size = new System.Drawing.Size(1599, 953);
-            this.panelBlancoPrincipal.TabIndex = 1;
+            //this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -142,32 +127,14 @@ namespace Esteban
             this.btnCerrarPrincipal.UseVisualStyleBackColor = false;
             this.btnCerrarPrincipal.Click += new System.EventHandler(this.btnCerrarPrincipal_Click);
             // 
-            // fecha
+            // panelBlancoPrincipal
             // 
-            this.fecha.AutoSize = true;
-            this.fecha.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            this.fecha.Location = new System.Drawing.Point(391, 531);
-            this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(207, 74);
-            this.fecha.TabIndex = 8;
-            this.fecha.Text = "fecha";
-            // 
-            // hora
-            // 
-            this.hora.AutoSize = true;
-            this.hora.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hora.ForeColor = System.Drawing.Color.White;
-            this.hora.Location = new System.Drawing.Point(634, 346);
-            this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(330, 142);
-            this.hora.TabIndex = 7;
-            this.hora.Text = "hora";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.panelBlancoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            this.panelBlancoPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBlancoPrincipal.Location = new System.Drawing.Point(325, 0);
+            this.panelBlancoPrincipal.Name = "panelBlancoPrincipal";
+            this.panelBlancoPrincipal.Size = new System.Drawing.Size(1599, 953);
+            this.panelBlancoPrincipal.TabIndex = 1;
             // 
             // FrmPrincipal
             // 
@@ -186,8 +153,6 @@ namespace Esteban
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panelOpcionesLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelBlancoPrincipal.ResumeLayout(false);
-            this.panelBlancoPrincipal.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -202,9 +167,6 @@ namespace Esteban
         private System.Windows.Forms.Panel panelBlancoPrincipal;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnCerrarPrincipal;
-        private System.Windows.Forms.Label fecha;
-        private System.Windows.Forms.Label hora;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 
