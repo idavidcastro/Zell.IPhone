@@ -29,8 +29,8 @@ namespace Esteban
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSamsung = new System.Windows.Forms.TextBox();
@@ -67,6 +67,7 @@ namespace Esteban
             this.cmbBlanco = new System.Windows.Forms.ComboBox();
             this.txtBlanco = new System.Windows.Forms.TextBox();
             this.cmbOpcionesdeConsulta = new System.Windows.Forms.ComboBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataConsultaEnRegistro)).BeginInit();
@@ -81,7 +82,7 @@ namespace Esteban
             this.btnGuardar.Location = new System.Drawing.Point(1326, 199);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(230, 61);
-            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -132,8 +133,10 @@ namespace Esteban
             this.txtSamsung.Multiline = true;
             this.txtSamsung.Name = "txtSamsung";
             this.txtSamsung.Size = new System.Drawing.Size(212, 30);
-            this.txtSamsung.TabIndex = 25;
+            this.txtSamsung.TabIndex = 3;
             this.txtSamsung.TextChanged += new System.EventHandler(this.txtSamsung_TextChanged);
+            this.txtSamsung.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSamsung_KeyDown);
+            this.txtSamsung.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSamsung_KeyPress);
             // 
             // Samsung
             // 
@@ -163,7 +166,7 @@ namespace Esteban
             this.cmbAppleWatch.Location = new System.Drawing.Point(807, 107);
             this.cmbAppleWatch.Name = "cmbAppleWatch";
             this.cmbAppleWatch.Size = new System.Drawing.Size(212, 28);
-            this.cmbAppleWatch.TabIndex = 23;
+            this.cmbAppleWatch.TabIndex = 2;
             this.cmbAppleWatch.SelectedIndexChanged += new System.EventHandler(this.cmbAppleWatch_SelectedIndexChanged);
             // 
             // label13
@@ -196,7 +199,7 @@ namespace Esteban
             this.cmbColor.Location = new System.Drawing.Point(807, 170);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(212, 28);
-            this.cmbColor.TabIndex = 21;
+            this.cmbColor.TabIndex = 4;
             this.cmbColor.SelectedIndexChanged += new System.EventHandler(this.cmbColor_SelectedIndexChanged);
             // 
             // label10
@@ -218,8 +221,9 @@ namespace Esteban
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(212, 95);
-            this.txtObservacion.TabIndex = 19;
+            this.txtObservacion.TabIndex = 10;
             this.txtObservacion.TextChanged += new System.EventHandler(this.txtObservacion_TextChanged);
+            this.txtObservacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtObservacion_KeyDown);
             // 
             // txtSalida
             // 
@@ -229,8 +233,9 @@ namespace Esteban
             this.txtSalida.Multiline = true;
             this.txtSalida.Name = "txtSalida";
             this.txtSalida.Size = new System.Drawing.Size(212, 30);
-            this.txtSalida.TabIndex = 18;
+            this.txtSalida.TabIndex = 9;
             this.txtSalida.TextChanged += new System.EventHandler(this.txtSalida_TextChanged);
+            this.txtSalida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSalida_KeyDown);
             this.txtSalida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalida_KeyPress);
             // 
             // txtEntrada
@@ -241,8 +246,9 @@ namespace Esteban
             this.txtEntrada.Multiline = true;
             this.txtEntrada.Name = "txtEntrada";
             this.txtEntrada.Size = new System.Drawing.Size(212, 30);
-            this.txtEntrada.TabIndex = 17;
+            this.txtEntrada.TabIndex = 8;
             this.txtEntrada.TextChanged += new System.EventHandler(this.txtEntrada_TextChanged);
+            this.txtEntrada.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEntrada_KeyDown);
             this.txtEntrada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntrada_KeyPress);
             // 
             // txtIMEI2
@@ -253,8 +259,9 @@ namespace Esteban
             this.txtIMEI2.Multiline = true;
             this.txtIMEI2.Name = "txtIMEI2";
             this.txtIMEI2.Size = new System.Drawing.Size(212, 30);
-            this.txtIMEI2.TabIndex = 16;
+            this.txtIMEI2.TabIndex = 6;
             this.txtIMEI2.TextChanged += new System.EventHandler(this.txtIMEI2_TextChanged);
+            this.txtIMEI2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIMEI2_KeyDown);
             this.txtIMEI2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMEI2_KeyPress);
             // 
             // txtIMEI1
@@ -265,8 +272,9 @@ namespace Esteban
             this.txtIMEI1.Multiline = true;
             this.txtIMEI1.Name = "txtIMEI1";
             this.txtIMEI1.Size = new System.Drawing.Size(212, 30);
-            this.txtIMEI1.TabIndex = 15;
+            this.txtIMEI1.TabIndex = 5;
             this.txtIMEI1.TextChanged += new System.EventHandler(this.txtIMEI1_TextChanged);
+            this.txtIMEI1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIMEI1_KeyDown);
             this.txtIMEI1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMEI1_KeyPress);
             // 
             // label6
@@ -294,7 +302,7 @@ namespace Esteban
             this.cmbGB.Location = new System.Drawing.Point(259, 299);
             this.cmbGB.Name = "cmbGB";
             this.cmbGB.Size = new System.Drawing.Size(212, 28);
-            this.cmbGB.TabIndex = 12;
+            this.cmbGB.TabIndex = 7;
             this.cmbGB.SelectedIndexChanged += new System.EventHandler(this.cmbGB_SelectedIndexChanged);
             // 
             // cmbIphone
@@ -329,7 +337,7 @@ namespace Esteban
             this.cmbIphone.Location = new System.Drawing.Point(259, 106);
             this.cmbIphone.Name = "cmbIphone";
             this.cmbIphone.Size = new System.Drawing.Size(212, 28);
-            this.cmbIphone.TabIndex = 11;
+            this.cmbIphone.TabIndex = 1;
             this.cmbIphone.SelectedIndexChanged += new System.EventHandler(this.cmbIphone_SelectedIndexChanged);
             // 
             // txtNombreCliente
@@ -340,9 +348,11 @@ namespace Esteban
             this.txtNombreCliente.Multiline = true;
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(212, 30);
-            this.txtNombreCliente.TabIndex = 10;
+            this.txtNombreCliente.TabIndex = 0;
             this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
+            this.txtNombreCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreCliente_KeyDown);
             this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
+            this.txtNombreCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombreCliente_KeyUp);
             // 
             // dateTimePicker1
             // 
@@ -352,7 +362,7 @@ namespace Esteban
             this.dateTimePicker1.Location = new System.Drawing.Point(259, 45);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(212, 26);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.TabIndex = 20;
             this.dateTimePicker1.Value = new System.DateTime(2022, 8, 12, 14, 45, 4, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -453,7 +463,7 @@ namespace Esteban
             this.btnActualizar.Location = new System.Drawing.Point(1326, 304);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(230, 61);
-            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.TabIndex = 12;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -487,24 +497,24 @@ namespace Esteban
             this.dataConsultaEnRegistro.BackgroundColor = System.Drawing.Color.White;
             this.dataConsultaEnRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataConsultaEnRegistro.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataConsultaEnRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataConsultaEnRegistro.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataConsultaEnRegistro.ColumnHeadersHeight = 30;
             this.dataConsultaEnRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataConsultaEnRegistro.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataConsultaEnRegistro.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataConsultaEnRegistro.EnableHeadersVisualStyles = false;
             this.dataConsultaEnRegistro.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
             this.dataConsultaEnRegistro.Location = new System.Drawing.Point(51, 21);
@@ -539,18 +549,18 @@ namespace Esteban
             this.btnEliminar.Location = new System.Drawing.Point(1326, 799);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(230, 61);
-            this.btnEliminar.TabIndex = 26;
+            this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(1372, 723);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 31);
-            this.button1.TabIndex = 28;
+            this.button1.Size = new System.Drawing.Size(134, 37);
+            this.button1.TabIndex = 16;
             this.button1.Text = "Refrescar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -564,7 +574,7 @@ namespace Esteban
             this.cmbBlanco.Location = new System.Drawing.Point(1326, 668);
             this.cmbBlanco.Name = "cmbBlanco";
             this.cmbBlanco.Size = new System.Drawing.Size(230, 28);
-            this.cmbBlanco.TabIndex = 45;
+            this.cmbBlanco.TabIndex = 15;
             this.cmbBlanco.SelectedIndexChanged += new System.EventHandler(this.cmbBlanco_SelectedIndexChanged);
             // 
             // txtBlanco
@@ -596,8 +606,19 @@ namespace Esteban
             this.cmbOpcionesdeConsulta.Location = new System.Drawing.Point(1326, 621);
             this.cmbOpcionesdeConsulta.Name = "cmbOpcionesdeConsulta";
             this.cmbOpcionesdeConsulta.Size = new System.Drawing.Size(230, 28);
-            this.cmbOpcionesdeConsulta.TabIndex = 46;
+            this.cmbOpcionesdeConsulta.TabIndex = 14;
             this.cmbOpcionesdeConsulta.SelectedIndexChanged += new System.EventHandler(this.cmbOpcionesdeConsulta_SelectedIndexChanged);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(1326, 440);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(230, 42);
+            this.btnLimpiar.TabIndex = 13;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // FrmRegistro
             // 
@@ -605,6 +626,7 @@ namespace Esteban
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1599, 953);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.cmbOpcionesdeConsulta);
             this.Controls.Add(this.cmbBlanco);
             this.Controls.Add(this.txtBlanco);
@@ -641,7 +663,6 @@ namespace Esteban
         private System.Windows.Forms.TextBox txtIMEI1;
         private System.Windows.Forms.ComboBox cmbGB;
         private System.Windows.Forms.ComboBox cmbIphone;
-        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -657,7 +678,6 @@ namespace Esteban
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dataConsultaEnRegistro;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSamsung;
         private System.Windows.Forms.Label Samsung;
@@ -666,5 +686,8 @@ namespace Esteban
         private System.Windows.Forms.ComboBox cmbBlanco;
         private System.Windows.Forms.TextBox txtBlanco;
         private System.Windows.Forms.ComboBox cmbOpcionesdeConsulta;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.DataGridView dataConsultaEnRegistro;
+        private System.Windows.Forms.TextBox txtNombreCliente;
     }
 }

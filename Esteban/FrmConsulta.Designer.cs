@@ -29,15 +29,15 @@ namespace Esteban
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbOpcionesdeConsulta = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.labelBlanco = new System.Windows.Forms.Label();
-            this.dataConsultaEnConsulta = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.txtBlanco = new System.Windows.Forms.TextBox();
             this.cmbBlanco = new System.Windows.Forms.ComboBox();
+            this.dataConsultaEnConsulta = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataConsultaEnConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,42 +84,9 @@ namespace Esteban
             this.labelBlanco.TabIndex = 31;
             this.labelBlanco.Text = "→";
             // 
-            // dataConsultaEnConsulta
-            // 
-            this.dataConsultaEnConsulta.BackgroundColor = System.Drawing.Color.White;
-            this.dataConsultaEnConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataConsultaEnConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataConsultaEnConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataConsultaEnConsulta.ColumnHeadersHeight = 30;
-            this.dataConsultaEnConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataConsultaEnConsulta.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataConsultaEnConsulta.EnableHeadersVisualStyles = false;
-            this.dataConsultaEnConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
-            this.dataConsultaEnConsulta.Location = new System.Drawing.Point(143, 140);
-            this.dataConsultaEnConsulta.Name = "dataConsultaEnConsulta";
-            this.dataConsultaEnConsulta.RowHeadersVisible = false;
-            this.dataConsultaEnConsulta.RowHeadersWidth = 51;
-            this.dataConsultaEnConsulta.RowTemplate.Height = 24;
-            this.dataConsultaEnConsulta.Size = new System.Drawing.Size(1313, 673);
-            this.dataConsultaEnConsulta.TabIndex = 40;
-            // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(684, 839);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(230, 43);
@@ -152,16 +119,55 @@ namespace Esteban
             this.cmbBlanco.TabIndex = 43;
             this.cmbBlanco.SelectedIndexChanged += new System.EventHandler(this.cmbBlanco_SelectedIndexChanged);
             // 
+            // dataConsultaEnConsulta
+            // 
+            this.dataConsultaEnConsulta.AllowUserToAddRows = false;
+            this.dataConsultaEnConsulta.AllowUserToDeleteRows = false;
+            this.dataConsultaEnConsulta.AllowUserToResizeColumns = false;
+            this.dataConsultaEnConsulta.AllowUserToResizeRows = false;
+            this.dataConsultaEnConsulta.BackgroundColor = System.Drawing.Color.White;
+            this.dataConsultaEnConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataConsultaEnConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(63)))), ((int)(((byte)(83)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataConsultaEnConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataConsultaEnConsulta.ColumnHeadersHeight = 30;
+            this.dataConsultaEnConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataConsultaEnConsulta.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataConsultaEnConsulta.EnableHeadersVisualStyles = false;
+            this.dataConsultaEnConsulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(21)))), ((int)(((byte)(14)))));
+            this.dataConsultaEnConsulta.Location = new System.Drawing.Point(192, 130);
+            this.dataConsultaEnConsulta.Name = "dataConsultaEnConsulta";
+            this.dataConsultaEnConsulta.ReadOnly = true;
+            this.dataConsultaEnConsulta.RowHeadersVisible = false;
+            this.dataConsultaEnConsulta.RowHeadersWidth = 51;
+            this.dataConsultaEnConsulta.RowTemplate.Height = 24;
+            this.dataConsultaEnConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataConsultaEnConsulta.Size = new System.Drawing.Size(1198, 672);
+            this.dataConsultaEnConsulta.TabIndex = 44;
+            // 
             // FrmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1599, 953);
+            this.Controls.Add(this.dataConsultaEnConsulta);
             this.Controls.Add(this.cmbBlanco);
             this.Controls.Add(this.txtBlanco);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.dataConsultaEnConsulta);
             this.Controls.Add(this.labelBlanco);
             this.Controls.Add(this.cmbOpcionesdeConsulta);
             this.Controls.Add(this.label11);
@@ -179,9 +185,9 @@ namespace Esteban
         private System.Windows.Forms.ComboBox cmbOpcionesdeConsulta;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelBlanco;
-        private System.Windows.Forms.DataGridView dataConsultaEnConsulta;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtBlanco;
         private System.Windows.Forms.ComboBox cmbBlanco;
+        private System.Windows.Forms.DataGridView dataConsultaEnConsulta;
     }
 }

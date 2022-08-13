@@ -24,6 +24,7 @@ namespace Esteban
             InitializeComponent();
             registroService = new RegistroService(ConfigConnectionString.Cadena);
             CargarListado();
+            
         }
         public void CargarListado()
         {
@@ -32,20 +33,21 @@ namespace Esteban
 
             dataConsultaEnRegistro.DataSource = registros;
             dataConsultaEnRegistro.Columns[0].DefaultCellStyle.Format = "dd/MM/yyyy";
+            
         }
         public void LimpiarCampos()
         {
-            txtNombreCliente.Text = " ";
-            cmbIphone.Text = " ";
-            cmbAppleWatch.Text = " ";
-            txtSamsung.Text = " ";
-            cmbGB.Text = " ";
-            cmbColor.Text = " ";
-            txtIMEI1.Text = " ";
-            txtIMEI2.Text = " ";
-            txtEntrada.Text = " ";
-            txtSalida.Text = " ";
-            txtObservacion.Text = " ";
+            txtNombreCliente.Text = "";
+            cmbIphone.SelectedItem = null;
+            cmbAppleWatch.SelectedItem = null;
+            txtSamsung.Text = "";
+            cmbGB.SelectedItem = null;
+            cmbColor.SelectedItem = null;
+            txtIMEI1.Text = "";
+            txtIMEI2.Text = "";
+            txtEntrada.Text = "";
+            txtSalida.Text = "";
+            txtObservacion.Text = "";
         }
 
         private void button3_MouseHover(object sender, EventArgs e)
@@ -92,6 +94,7 @@ namespace Esteban
                 e.Handled = true;
                 return;
             }
+
         }
 
         private void txtIMEI1_TextChanged(object sender, EventArgs e)
@@ -107,6 +110,7 @@ namespace Esteban
                 e.Handled = true;
                 return;
             }
+            
         }
 
         private void txtIMEI2_KeyPress(object sender, KeyPressEventArgs e)
@@ -200,8 +204,9 @@ namespace Esteban
         private void button1_Click(object sender, EventArgs e)
         {
             CargarListado();
-            cmbOpcionesdeConsulta.Text = "";
-            cmbBlanco.Text = "";
+            dataConsultaEnRegistro.ClearSelection();
+            cmbOpcionesdeConsulta.SelectedItem = null;
+            cmbBlanco.SelectedItem = null;
             txtBlanco.Text = "";
             
         }
@@ -215,11 +220,13 @@ namespace Esteban
 
         private void FrmRegistro_Load(object sender, EventArgs e)
         {
-            
+            dataConsultaEnRegistro.ClearSelection();
+
             btnGuardar.Enabled = false;          
             btnEliminar.Enabled = false;
-            //btnBuscarEnRegistro.Enabled = false;
-            
+            btnActualizar.Enabled = false;
+
+            txtNombreCliente.Focus();
         }
         public void Validar()
         {
@@ -553,6 +560,75 @@ namespace Esteban
         private void dataConsultaEnRegistro_SelectionChanged(object sender, EventArgs e)
         {
             btnEliminar.Enabled = true;
+            btnActualizar.Enabled = true;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            dataConsultaEnRegistro.ClearSelection();
+            LimpiarCampos();
+        }
+
+        private void txtNombreCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+        }
+
+        private void txtSamsung_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+        }
+
+        private void txtIMEI1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+        }
+
+        private void txtIMEI2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+        }
+
+        private void txtEntrada_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+        }
+
+        private void txtSalida_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+        }
+
+        private void txtObservacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+                System.Windows.Forms.SendKeys.Send("{TAB}");
+        }
+
+        private void txtNombreCliente_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSamsung_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }

@@ -129,7 +129,7 @@ namespace Esteban
 
         private void FrmConsulta_Load(object sender, EventArgs e)
         {
-
+            dataConsultaEnConsulta.ClearSelection();
         }
 
         private void txtNombreCliente_KeyUp(object sender, KeyEventArgs e)
@@ -301,11 +301,13 @@ namespace Esteban
 
         private void button5_Click(object sender, EventArgs e)
         {
-            CargarListado();
 
-            cmbOpcionesdeConsulta.Text = " ";
-            cmbBlanco.Text = " ";
-            txtBlanco.Text = " ";
+            CargarListado();
+            dataConsultaEnConsulta.ClearSelection();
+
+            cmbOpcionesdeConsulta.SelectedItem = null;
+            cmbBlanco.SelectedItem = null;
+            txtBlanco.Text = "";
         }
     }
 }
