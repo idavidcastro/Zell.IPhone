@@ -31,6 +31,7 @@ namespace Esteban
             registros = registroService.ConsultarListRegistros();
 
             dataConsultaEnRegistro.DataSource = registros;
+            dataConsultaEnRegistro.Columns[0].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
         public void LimpiarCampos()
         {
@@ -62,17 +63,17 @@ namespace Esteban
             registro = new Registro()
             {                
                 FechaIngreso = DateTime.Parse(dateTimePicker1.Text),               
-                NombreCliente = txtNombreCliente.Text,
+                NombreCliente = txtNombreCliente.Text.TrimStart().TrimEnd(),
                 Iphone= cmbIphone.Text,
                 AppleWatch= cmbAppleWatch.Text,
-                Samsung= txtSamsung.Text,
+                Samsung= txtSamsung.Text.TrimStart().TrimEnd(),
                 GB= cmbGB.Text,
                 Color= cmbColor.Text,
-                IMEI1= txtIMEI1.Text,
-                IMEI2= txtIMEI2.Text,
-                Entrada= txtEntrada.Text,
-                Salida = txtSalida.Text,
-                Observacion= txtObservacion.Text
+                IMEI1= txtIMEI1.Text.TrimStart().TrimEnd(),
+                IMEI2 = txtIMEI2.Text.TrimStart().TrimEnd(),
+                Entrada = txtEntrada.Text.TrimStart().TrimEnd(),
+                Salida = txtSalida.Text.TrimStart().TrimEnd(),
+                Observacion = txtObservacion.Text.TrimStart().TrimEnd(),
             };
             
 
@@ -84,7 +85,8 @@ namespace Esteban
 
         private void txtNombreCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if((e.KeyChar >=32 && e.KeyChar <=64) || (e.KeyChar >=91 && e.KeyChar <=96) || (e.KeyChar >=123 && e.KeyChar <= 255))
+            
+            if((e.KeyChar >=33 && e.KeyChar <=64) || (e.KeyChar >=91 && e.KeyChar <=96) || (e.KeyChar >=123 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Sólo se permiten letras en este campo.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
@@ -198,9 +200,9 @@ namespace Esteban
         private void button1_Click(object sender, EventArgs e)
         {
             CargarListado();
-            cmbOpcionesdeConsulta.Text = " ";
-            cmbBlanco.Text = " ";
-            txtBlanco.Text = " ";
+            cmbOpcionesdeConsulta.Text = "";
+            cmbBlanco.Text = "";
+            txtBlanco.Text = "";
             
         }
 

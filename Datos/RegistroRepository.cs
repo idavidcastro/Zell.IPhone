@@ -26,7 +26,7 @@ namespace Datos
                 command.CommandText = "insert Registro(FechaIngreso,Nombre,Iphone,AppleWatch,Samsung,GB,Color,IMEI1,IMEI2,Entrada,Salida,Observacion)" +
                               " values (@FechaIngreso, @Nombre, @Iphone,@AppleWatch,@Samsung, @GB,@Color, @IMEI1, @IMEI2, @Entrada,@Salida,@Observacion)";
 
-                command.Parameters.Add(new SqlParameter("@FechaIngreso", registro.FechaIngreso.ToShortDateString()));
+                command.Parameters.Add(new SqlParameter("@FechaIngreso", registro.FechaIngreso));
                 command.Parameters.Add(new SqlParameter("@Nombre", ValidarCamposVacios(registro.NombreCliente)));
                 command.Parameters.Add(new SqlParameter("@Iphone", ValidarCamposVacios(registro.Iphone)));
                 command.Parameters.Add(new SqlParameter("@AppleWatch", ValidarCamposVacios(registro.AppleWatch)));
@@ -44,7 +44,7 @@ namespace Datos
         }
         public string ValidarCamposVacios(string campo)
         {
-            if (string.IsNullOrEmpty(campo))
+            if (campo.Equals(""))
             {
                 return "NULL";
             }
@@ -324,7 +324,7 @@ namespace Datos
             List<Registro> registros = new List<Registro>();
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "Select * from Registro order by FechaIngreso asc";
+                command.CommandText = "Select * from Registro order by FechaIngreso desc";
                 var reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
