@@ -38,10 +38,13 @@ namespace Esteban
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCerrarPrincipal = new System.Windows.Forms.Button();
             this.panelBlancoPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelOpcionesLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
+            this.panelBlancoPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -103,7 +106,6 @@ namespace Esteban
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            //this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -130,11 +132,22 @@ namespace Esteban
             // panelBlancoPrincipal
             // 
             this.panelBlancoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
+            this.panelBlancoPrincipal.Controls.Add(this.pictureBox2);
             this.panelBlancoPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBlancoPrincipal.Location = new System.Drawing.Point(325, 0);
             this.panelBlancoPrincipal.Name = "panelBlancoPrincipal";
             this.panelBlancoPrincipal.Size = new System.Drawing.Size(1599, 953);
             this.panelBlancoPrincipal.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(735, 412);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmPrincipal
             // 
@@ -154,6 +167,9 @@ namespace Esteban
             this.panelOpcionesLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.panelBlancoPrincipal.ResumeLayout(false);
+            this.panelBlancoPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,6 +183,7 @@ namespace Esteban
         private System.Windows.Forms.Panel panelBlancoPrincipal;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnCerrarPrincipal;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
